@@ -1,0 +1,104 @@
+/* ─────────────────────────────────────────────
+   Global — CSS variables, reset, base, animations
+──────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Outfit:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap');
+
+*, *::before, *::after {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --bg:       #F7F9FC;
+  --white:    #FFFFFF;
+  --blue:     #2563EB;
+  --blue-l:   #DBEAFE;
+  --blue-m:   #93C5FD;
+  --blue-s:   #EFF6FF;
+  --dark:     #0F172A;
+  --mid:      #1E293B;
+  --muted:    #64748B;
+  --border:   #E2E8F0;
+  --code-bg:  #F1F5F9;
+  --red:      #EF4444;
+  --green:    #22C55E;
+  --amber:    #F59E0B;
+
+  --serif: 'Fraunces', Georgia, serif;
+  --sans:  'Outfit', sans-serif;
+  --mono:  'Fira Code', monospace;
+
+  --nav-h: 62px;
+}
+
+html  { scroll-behavior: smooth; }
+body  { font-family: var(--sans); background: var(--bg); color: var(--dark); overflow-x: hidden; line-height: 1.6; }
+
+/* ── Syntax highlight colours ── */
+.pe-kw { color: #7C3AED; }
+.pe-fn { color: #2563EB; }
+.pe-ty { color: #D97706; }
+.pe-cm { color: #94A3B8; }
+.pe-st { color: #059669; }
+.pe-nu { color: #DC2626; }
+
+/* ── Shared section typography ── */
+.sec-n {
+  font-family: var(--serif);
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 600; color: var(--border);
+  line-height: 1; margin-bottom: -.8rem;
+  letter-spacing: -.05em; user-select: none;
+}
+.sec-title {
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 3.5vw, 2.8rem);
+  font-weight: 600; letter-spacing: -.03em;
+  color: var(--dark); margin-bottom: .6rem; line-height: 1.15;
+}
+.sec-sub {
+  font-size: clamp(.86rem, 1.8vw, .98rem);
+  color: var(--muted); font-weight: 300;
+  max-width: 520px; line-height: 1.8;
+}
+.divider { border: none; border-top: 1px solid var(--border); }
+
+/* ── Scroll fade-up animations ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.fade-up.in { opacity: 1; transform: translateY(0); }
+.d1 { transition-delay: .08s; }
+.d2 { transition-delay: .16s; }
+.d3 { transition-delay: .24s; }
+.d4 { transition-delay: .32s; }
+
+/* ── Shared buttons ── */
+.btn-dark {
+  background: var(--dark); color: #fff;
+  padding: .72rem 1.7rem; border-radius: 8px;
+  font-size: .88rem; font-weight: 500;
+  border: none; cursor: pointer;
+  font-family: var(--sans);
+  transition: background .2s, transform .2s;
+  text-decoration: none; display: inline-block;
+}
+.btn-dark:hover { background: var(--blue); transform: translateY(-2px); }
+
+.btn-outline {
+  color: var(--dark); padding: .72rem 1.3rem;
+  border-radius: 8px; font-size: .88rem; font-weight: 500;
+  border: 1.5px solid var(--border); cursor: pointer;
+  font-family: var(--sans); background: transparent;
+  transition: border-color .2s, color .2s, transform .2s;
+  text-decoration: none; display: inline-block;
+}
+.btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar        { width: 4px; height: 4px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: var(--border); border-radius: 3px; }
