@@ -10,7 +10,7 @@ export default function Author() {
 
         <div>
           <div className="av-name">Milliyan Mohammed Awol</div>
-          <div className="av-role">Electrical &amp; Computer Engineering — Computer Engineering; Embedded Systems</div>
+          <div className="av-role">Electrical &amp; Computer Engineering — Compiler Design; Embedded Systems</div>
           <p className="av-bio">
             Electrical and Computer Engineering student specializing in computer engineering. PyEmbed is original research into
             bridging the gap between high-level Python and bare-metal IoT
