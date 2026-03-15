@@ -139,4 +139,4 @@ Embedded C output
 ## Author
 
 **Milliyan Mohammed Awol**  
-Computer Science — Compiler Design & Embedded Systems
+Electrical and Computer Engineering — Compiler Design & Embedded Systems
